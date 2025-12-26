@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-
+import profilePic from "../assets/images/Write.png";
 const Wemail = () => {
   const [open, setOpen] = useState(false);
   const dragRef = useRef(null);
@@ -51,12 +51,28 @@ const Wemail = () => {
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!email || !message) return alert("Please fill both fields");
-    const mailtoLink = `mailto:${email}?subject=Contact&body=${encodeURIComponent(message)}`;
-    window.location.href = mailtoLink;
-  };
+      const handleSubmit = (e) => {
+      e.preventDefault();
+
+      if (!email || !message) {
+        alert("Please fill both fields");
+        return;
+      }
+
+      const mailtoLink = `mailto:${email}?subject=Contact&body=${encodeURIComponent(message)}`;
+
+      // Open mail client
+      window.location.href = mailtoLink;
+
+      // UX feedback
+      alert("Your email app has been opened. Please click Send 😊");
+
+      // Optional: reset form & close window
+      setEmail("");
+      setMessage("");
+      setOpen(false);
+    };
+
 
   return (
     <>
@@ -66,7 +82,7 @@ const Wemail = () => {
         className="fixed bottom-20 right-4 z-50 w-14 h-14 rounded-full bg-blue-500 flex items-center justify-center shadow-lg hover:bg-blue-600 transition overflow-hidden"
       >
         <img
-          src="../assets/images/Write.png"
+          src="src/assets/images/Write.png"
           alt="Write Email"
           className="w-full h-full object-cover rounded-full"
         />

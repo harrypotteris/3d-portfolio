@@ -9,6 +9,14 @@
   --green-rgb: 125 161 35;
 }
 
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
 body {
   font-family: "Work Sans", sans-serif;
 }

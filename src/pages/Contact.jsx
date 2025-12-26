@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import profilePic from "../assets/images/Me.png"; // replace with your image path
+import profilePic from "../assets/images/Me.png";
 
 const DraggableContact = ({ onClose }) => {
   const dragRef = useRef(null);

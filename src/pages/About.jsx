@@ -1,4 +1,6 @@
 import React, { useRef, useState } from "react";
+import meImage from "../assets/images/Me.png";
+
 
 const DraggableAbout = ({ onClose }) => {
   const dragRef = useRef(null);
@@ -52,7 +54,7 @@ const DraggableAbout = ({ onClose }) => {
         {/* IMAGE */}
         <div className="w-1/3">
           <img
-            src="../assets/images/Me.png"
+            src="src/assets/images/Me.png"
             alt="Charitha"
             className="rounded-lg object-cover w-full h-full"
           />
