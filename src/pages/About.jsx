@@ -53,11 +53,12 @@ const DraggableAbout = ({ onClose }) => {
         
         {/* IMAGE */}
         <div className="w-1/3">
-          <img
-            src="src/assets/images/Me.png"
-            alt="Charitha"
-            className="rounded-lg object-cover w-full h-full"
-          />
+        <img
+        src={meImage}
+        alt="Charitha"
+        className="rounded-lg object-cover w-full h-full"
+      />
+
         </div>
 
         {/* ABOUT TEXT */}
@@ -81,3 +82,4 @@ const DraggableAbout = ({ onClose }) => {
 };
 
 export default DraggableAbout;
+
