@@ -82,7 +82,7 @@ const Wemail = () => {
         className="fixed bottom-20 right-4 z-50 w-14 h-14 rounded-full bg-blue-500 flex items-center justify-center shadow-lg hover:bg-blue-600 transition overflow-hidden"
       >
         <img
-          src="src/assets/images/Write.png"
+           src={profilePic}
           alt="Write Email"
           className="w-full h-full object-cover rounded-full"
         />
